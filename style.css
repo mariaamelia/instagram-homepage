@@ -1,0 +1,177 @@
+/************************************************************
+    Starting de web page and clearing padding and margin
+    It's a good patern for the beginning webpage css.
+*************************************************************/
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+/**************************************************************
+    General Definition 
+***************************************************************/
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(243, 243, 243);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/*********************************************************************
+    Working with flex-box, beyound align-itens is possible to alighn 
+    vertically  the div tag who will be inside of parent div. 
+    instagran-wrapper is the parent div.
+***********************************************************************/
+.instagram-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 60%;
+    height: 100vh;
+}
+
+.instagram-phone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+.instagram-phone img {
+    width: 50rem;
+}
+
+.instagram-continue{
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;
+    flex-direction: column;
+    width: 50%;
+    min-height: 34rem;
+}
+/***********************************************************************
+    By the flex-direction atribute we can put all the div tag in column.  
+*************************************************************************/
+.group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    padding: 1.3rem 0;
+    border: 1px solid lightgray;
+    margin-top:10px;
+}
+
+/******************************************************************
+    Applying styles only in one child element.
+*******************************************************************/
+.group:nth-child(1){
+    min-height: 19rem;
+}
+
+.instagram-logo{
+    height: 3rem;
+}
+
+.profile-photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    background-image: url('./img/woman-profile.jpg');
+    background-repeat: no-repeat;
+    background-position: inherit;
+    height: 121px;
+    width: 133px;
+    background-size: 100%;
+    margin-bottom: 10px;    
+}
+
+.profile-photo img{
+    height: 8rem;
+}
+
+.instagram-login{
+    background-color: #0095f6;
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.instagram-logout{
+    color:#0095f6;
+    margin-top: 1rem;
+}
+.not-account{
+    color: rgb(160,160,160)
+}
+
+.link-blue {
+    color:#0095f6;
+}
+.get-the-app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1.3rem;
+}
+
+.download{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:1rem;
+
+}
+.app-download:nth-child(1){
+    background-image: url('./img/download-apple.png');
+    background-size: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 9px;
+    width: 218px;
+    height: 46px;
+}
+.app-download:nth-child(2){
+    background-image: url('./img/download-android.png');
+    background-size: 88%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 52px;
+    width: 200px;
+}
+
+@media(max-width:1024px){
+    .instagram-wrapper{
+        width: 90%;
+
+    }
+}
+@media(max-width:658px){
+    body{
+        background-color: #fff;
+    }
+    .instagram-wrapper{
+        width: 90%;
+        justify-content: center;
+    }
+    .instagram-phone{
+        display: none;
+    }
+    .instagram-continue{
+        width: 100%;
+    }
+    .group{
+        border:1 px solid transparent;
+    }
+}
